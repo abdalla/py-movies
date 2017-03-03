@@ -1,6 +1,10 @@
 import webbrowser;
 
 class Movie():
+    """ DOCUMENTATION """;
+
+    VALID_RATINGS = [ "G", "PG", "PG-13", "R" ];
+
     def __init__(self, title, storyline, poster, ytb):
         self.title = title;
         self.storyline = storyline;

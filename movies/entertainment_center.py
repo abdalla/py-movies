@@ -19,4 +19,8 @@ school_of_rock = media.Movie("School of Rock",
 
 movies = [toy_story, avatar, school_of_rock];
 
-page.open_movies_page(movies);
+#page.open_movies_page(movies);
+
+print(media.Movie.__doc__);
+print(media.Movie.__name__);
+print(media.Movie.__module__);
