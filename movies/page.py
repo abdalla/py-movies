@@ -9,7 +9,7 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Movies!</title>
+    <title>My Fav. Movies</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -17,8 +17,12 @@ main_page_head = '''
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
+        * {
+             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
         body {
             padding-top: 80px;
+            background-color: black;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -34,18 +38,21 @@ main_page_head = '''
         #trailer-video {
             width: 100%;
             height: 100%;
+            background-color: #696969;
         }
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            color: #fff;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            color: #FFA500;
             cursor: pointer;
         }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
+            background-color: #696969;
         }
         .scale-media iframe {
             border: none;
@@ -54,10 +61,17 @@ main_page_head = '''
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: #696969;
+        }
+        .synopsis {
+            color: #33BEBE;
+            margin: 10px;
+        }
+        .modal-content {
+            background-color: #696969;
         }
     </style>
-    <script type="text/javascript" charset="utf-8">
+     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
             // Remove the src so the player itself gets removed, as this is the only
@@ -67,6 +81,7 @@ main_page_head = '''
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var storyline = $(this).attr('data-storyline');
             var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
             $("#trailer-video-container").empty().append($("<iframe></iframe>", {
               'id': 'trailer-video',
@@ -74,6 +89,11 @@ main_page_head = '''
               'src': sourceUrl,
               'frameborder': 0
             }));
+            $("#movie-description").empty().append(
+                "<h3>SYNOPSIS</h3>"+
+                "<h6>" + storyline + "</h6>"
+            );
+
         });
         // Animate in the movies when the page loads
         $(document).ready(function () {
@@ -98,6 +118,7 @@ main_page_content = '''
           </a>
           <div class="scale-media" id="trailer-video-container">
           </div>
+          <div id="movie-description" class="synopsis"></div>
         </div>
       </div>
     </div>
@@ -122,7 +143,7 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-storyline="{storyline}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
 </div>
@@ -145,7 +166,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            storyline=movie.storyline
         )
     return content
 

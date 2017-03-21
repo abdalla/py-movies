@@ -7,7 +7,7 @@ Just open the file index.html in your browser.
 
 If you change some py file, you have to compile the project again, for it, just run the command below.
 
-*Make sure you have python running in yout machine.*
+*Make sure you have python running in your machine.*
 ```szh
  python movies/entertainment_center.py
 ```

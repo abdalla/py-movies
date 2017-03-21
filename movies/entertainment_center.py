@@ -37,6 +37,6 @@ movies = [toy_story, avatar, school_of_rock, max_movie, the_33, thertheen_hour];
 
 page.open_movies_page(movies);
 
-print(media.Movie.__doc__);
-print(media.Movie.__name__);
-print(media.Movie.__module__);
+# print(media.Movie.__doc__);
+# print(media.Movie.__name__);
+# print(media.Movie.__module__);
