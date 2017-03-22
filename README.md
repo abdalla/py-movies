@@ -13,6 +13,6 @@ If you change some py file, you have to compile the project again, for it, just 
 ```
 
 ## Movie Data
-The list of movies could be find in Data/movies.json
+The list of movies could be find at Data/movies.json
 
 If you add or remove any movie you have to compile the project again.
