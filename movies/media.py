@@ -1,6 +1,7 @@
 import webbrowser
 
 
+# Class used as model for movies.
 class Movie():
     def __init__(self, title, storyline, poster, ytb):
         self.title = title
