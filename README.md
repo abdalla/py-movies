@@ -11,3 +11,8 @@ If you change some py file, you have to compile the project again, for it, just 
 ```szh
  python movies/entertainment_center.py
 ```
+
+## Movie Data
+The list of movies could be find in Data/movies.json
+
+If you add or remove any movie you have to compile the project again.
