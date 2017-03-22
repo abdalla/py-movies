@@ -1,14 +1,20 @@
-import media;
-import page;
-import json;
+import json
+
+import media
+
+import page
+
 
 with open('Data/movies.json') as movies:
-        data = json.load(movies);
+        data = json.load(movies)
 
 movies = []
 
 for movie in data:
-        newMovie = media.Movie(movie['title'], movie['description'], movie['cover'], movie['trailler']);
-        movies.append(newMovie);
+        newMovie = media.Movie(movie['title'],
+                               movie['description'],
+                               movie['cover'],
+                               movie['trailler'])
+        movies.append(newMovie)
 
-page.open_movies_page(movies);
+page.open_movies_page(movies)

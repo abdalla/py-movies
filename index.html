@@ -6,13 +6,18 @@
     <title>My Fav. Movies</title>
 
     <!-- Bootstrap 3 -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet"
+        href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script
+        src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         * {
-             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             font-family: 'Lucida Sans', 'Lucida Sans Regular',
+             'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+             Verdana, sans-serif;
         }
         body {
             padding-top: 80px;
@@ -67,17 +72,20 @@
     </style>
      <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
-        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-            // Remove the src so the player itself gets removed, as this is the only
-            // reliable way to ensure the video stops playing in IE
-            $("#trailer-video-container").empty();
-        });
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal',
+            function (event) {
+            //Remove the src so the player itself gets removed,
+            //as this is the only
+            //reliable way to ensure the video stops playing in IE
+                $("#trailer-video-container").empty();
+            });
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
             var storyline = $(this).attr('data-storyline');
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+            var sourceUrl = 'http://www.youtube.com/embed/'
+                            + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>",{
               'id': 'trailer-video',
               'type': 'text-html',
               'src': sourceUrl,
@@ -103,8 +111,11 @@
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          <a href="#" class="hanging-close"
+            data-dismiss="modal"
+            aria-hidden="true">
+            <img
+            src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
           </a>
           <div class="scale-media" id="trailer-video-container">
           </div>
@@ -125,32 +136,56 @@
     </div>
     <div class="container">
       
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KYz2wyBy3kc" data-storyline="A story of a boy and his toys that come to life" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="KYz2wyBy3kc"
+    data-storyline="A story of a boy and his toys that come to life"
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" width="220" height="342">
     <h2>Toy Story</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="d1_JBMrrYw8" data-storyline="A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home." data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="d1_JBMrrYw8"
+    data-storyline="A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_UX182_CR0,0,182,268_AL_.jpg" width="220" height="342">
     <h2>Avatar</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XCwy6lW5Ixc" data-storyline="After being kicked out of a rock band, Dewey Finn becomes a substitute teacher of a strict elementary private school, only to try and turn it into a rock band." data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="XCwy6lW5Ixc"
+    data-storyline="After being kicked out of a rock band, Dewey Finn becomes a substitute teacher of a strict elementary private school, only to try and turn it into a rock band."
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="http://www.gstatic.com/tv/thumb/movieposters/33094/p33094_p_v8_aa.jpg" width="220" height="342">
     <h2>School of Rock</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6EPPMCwD5bw" data-storyline="After U.S. Marine Kyle Wincott is killed in Afghanistan, Max, his highly trained service dog, is too traumatized to remain in service. Back in the U.S., Kyle's family adopts the dog, but teenage brother Justin (Josh Wiggins) has problems of his own and doesn't want the animal. However, Max may be Justin's only chance to learn what really happened to his brother. With the help of a dog-savvy friend, Justin and Max begin to bond, and set out to unravel the mystery of Kyle's death." data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="6EPPMCwD5bw"
+    data-storyline="After U.S. Marine Kyle Wincott is killed in Afghanistan, Max, his highly trained service dog, is too traumatized to remain in service. Back in the U.S., Kyle's family adopts the dog, but teenage brother Justin (Josh Wiggins) has problems of his own and doesn't want the animal. However, Max may be Justin's only chance to learn what really happened to his brother. With the help of a dog-savvy friend, Justin and Max begin to bond, and set out to unravel the mystery of Kyle's death."
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRVbdwtE9pR0MR_5qtRqxkUqnHe1HJYe8pjuJsUQYFqDDJQFHox" width="220" height="342">
     <h2>MAX</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="hOoIBOYqHyw" data-storyline="In 2010, the eyes of the world turned to Chile, where 33 miners had been buried alive by the catastrophic explosion and collapse of a 100-year-old gold and copper mine." data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="hOoIBOYqHyw"
+    data-storyline="In 2010, the eyes of the world turned to Chile, where 33 miners had been buried alive by the catastrophic explosion and collapse of a 100-year-old gold and copper mine."
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="http://cdn2-www.comingsoon.net/assets/uploads/gallery/the-33/the33_1sht_main_dom_2764x4096.jpg" width="220" height="342">
     <h2>The 33</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="4CJBuUwd0Os" data-storyline="An attack takes place on the U.S. Special Mission Compound and a nearby CIA Annex in Benghazi on the eleventh anniversary of 9/11. Four Americans are killed in the attack, including U.S. Ambassador J. Christopher Stevens." data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+    data-trailer-youtube-id="4CJBuUwd0Os"
+    data-storyline="An attack takes place on the U.S. Special Mission Compound and a nearby CIA Annex in Benghazi on the eleventh anniversary of 9/11. Four Americans are killed in the attack, including U.S. Ambassador J. Christopher Stevens."
+    data-toggle="modal"
+    data-target="#trailer">
     <img src="https://lh3.googleusercontent.com/E81guSjoP1LJsQnr693zUGyiwYjCEWJZsKjYUKvnLTHKAW68zBXF_3cpHAaGC1cfPkY_hw=w300" width="220" height="342">
     <h2>13 Hour</h2>
 </div>
